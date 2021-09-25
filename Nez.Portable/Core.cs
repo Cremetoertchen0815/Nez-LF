@@ -72,7 +72,7 @@ namespace Nez
 		/// default GameServiceContainer access
 		/// </summary>
 		/// <value>The services.</value>
-		public new static GameServiceContainer Services => ((Game) _instance).Services;
+		public new static GameServiceContainer Services => ((Game)_instance).Services;
 
 		/// <summary>
 		/// provides access to the single Core/Game instance
@@ -200,7 +200,7 @@ namespace Nez
 
 		public new static void Exit()
 		{
-			((Game) _instance).Exit();
+			((Game)_instance).Exit();
 		}
 
 		#endregion
@@ -227,11 +227,11 @@ namespace Nez
 			}
 
 			// update all our systems and global managers
-			Time.Update((float) gameTime.ElapsedGameTime.TotalSeconds);
+			Time.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
 			Input.Update();
 
 			if (ExitOnEscapeKeypress &&
-			    (Input.IsKeyDown(Keys.Escape) || Input.GamePads[0].IsButtonReleased(Buttons.Back)))
+				(Input.IsKeyDown(Keys.Escape) || Input.GamePads[0].IsButtonReleased(Buttons.Back)))
 			{
 				base.Exit();
 				return;
@@ -250,11 +250,11 @@ namespace Nez
 				// 		- unless it is SceneTransition that doesn't change Scenes (no reason not to update)
 				//		- or it is a SceneTransition that has already switched to the new Scene (the new Scene needs to do its thing)
 				if (SceneTransition == null ||
-				    (SceneTransition != null &&
-				     (!SceneTransition._loadsNewScene || SceneTransition._isNewSceneLoaded)))
+					(SceneTransition != null &&
+					 (!SceneTransition._loadsNewScene || SceneTransition._isNewSceneLoaded)))
 				{
 					if (_scene.Enabled)
-					_scene.Update();
+						_scene.Update();
 				}
 
 				if (_nextScene != null)
@@ -292,7 +292,7 @@ namespace Nez
 			if (SceneTransition != null)
 			{
 				if (_scene != null && SceneTransition.WantsPreviousSceneRender &&
-				    !SceneTransition.HasPreviousSceneRender)
+					!SceneTransition.HasPreviousSceneRender)
 				{
 					_scene.Render();
 					_scene.PostRender(SceneTransition.PreviousSceneRender);
