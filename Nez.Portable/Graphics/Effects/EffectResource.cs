@@ -8,74 +8,74 @@ namespace Nez
 	public static class EffectResource
 	{
 		// sprite effects
-		internal static byte[] SpriteBlinkEffectBytes => GetFileResourceBytes("assets/nez/effects/SpriteBlinkEffect.mgfxo");
+		internal static byte[] SpriteBlinkEffectBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/SpriteBlinkEffect.mgfxo");
 
-		internal static byte[] SpriteLinesEffectBytes => GetFileResourceBytes("assets/nez/effects/SpriteLines.mgfxo");
+		internal static byte[] SpriteLinesEffectBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/SpriteLines.mgfxo");
 
-		internal static byte[] SpriteAlphaTestBytes => GetFileResourceBytes("assets/nez/effects/SpriteAlphaTest.mgfxo");
+		internal static byte[] SpriteAlphaTestBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/SpriteAlphaTest.mgfxo");
 
-		internal static byte[] CrosshatchBytes => GetFileResourceBytes("assets/nez/effects/Crosshatch.mgfxo");
+		internal static byte[] CrosshatchBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Crosshatch.mgfxo");
 
-		internal static byte[] NoiseBytes => GetFileResourceBytes("assets/nez/effects/Noise.mgfxo");
+		internal static byte[] NoiseBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Noise.mgfxo");
 
-		internal static byte[] TwistBytes => GetFileResourceBytes("assets/nez/effects/Twist.mgfxo");
+		internal static byte[] TwistBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Twist.mgfxo");
 
-		internal static byte[] DotsBytes => GetFileResourceBytes("assets/nez/effects/Dots.mgfxo");
+		internal static byte[] DotsBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Dots.mgfxo");
 
-		internal static byte[] DissolveBytes => GetFileResourceBytes("assets/nez/effects/Dissolve.mgfxo");
+		internal static byte[] DissolveBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Dissolve.mgfxo");
 
 		// post processor effects
-		internal static byte[] BloomCombineBytes => GetFileResourceBytes("assets/nez/effects/BloomCombine.mgfxo");
+		internal static byte[] BloomCombineBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/BloomCombine.mgfxo");
 
-		internal static byte[] BloomExtractBytes => GetFileResourceBytes("assets/nez/effects/BloomExtract.mgfxo");
+		internal static byte[] BloomExtractBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/BloomExtract.mgfxo");
 
-		internal static byte[] QualityBloom => GetFileResourceBytes("assets/nez/effects/QualityBloom.mgfxo");
+		internal static byte[] QualityBloom => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/QualityBloom.mgfxo");
 
-		internal static byte[] Mosaic => GetFileResourceBytes("assets/nez/effects/Mosaic.mgfxo");
+		internal static byte[] Mosaic => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Mosaic.mgfxo");
 
-		internal static byte[] LUTColorGrade => GetFileResourceBytes("assets/nez/effects/LUTColorGrade.mgfxo");
+		internal static byte[] LUTColorGrade => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/LUTColorGrade.mgfxo");
 
-		internal static byte[] GaussianBlurBytes => GetFileResourceBytes("assets/nez/effects/GaussianBlur.mgfxo");
+		internal static byte[] GaussianBlurBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/GaussianBlur.mgfxo");
 
-		internal static byte[] VignetteBytes => GetFileResourceBytes("assets/nez/effects/Vignette.mgfxo");
+		internal static byte[] VignetteBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Vignette.mgfxo");
 
-		internal static byte[] LetterboxBytes => GetFileResourceBytes("assets/nez/effects/Letterbox.mgfxo");
+		internal static byte[] LetterboxBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Letterbox.mgfxo");
 
-		internal static byte[] HeatDistortionBytes => GetFileResourceBytes("assets/nez/effects/HeatDistortion.mgfxo");
+		internal static byte[] HeatDistortionBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/HeatDistortion.mgfxo");
 
-		internal static byte[] SpriteLightMultiplyBytes => GetFileResourceBytes("assets/nez/effects/SpriteLightMultiply.mgfxo");
+		internal static byte[] SpriteLightMultiplyBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/SpriteLightMultiply.mgfxo");
 
-		internal static byte[] PixelGlitchBytes => GetFileResourceBytes("assets/nez/effects/PixelGlitch.mgfxo");
+		internal static byte[] PixelGlitchBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/PixelGlitch.mgfxo");
 
-		internal static byte[] StencilLightBytes => GetFileResourceBytes("assets/nez/effects/StencilLight.mgfxo");
+		internal static byte[] StencilLightBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/StencilLight.mgfxo");
 
 		// deferred lighting
-		internal static byte[] DeferredSpriteBytes => GetFileResourceBytes("assets/nez/effects/DeferredSprite.mgfxo");
+		internal static byte[] DeferredSpriteBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/DeferredSprite.mgfxo");
 
-		internal static byte[] DeferredLightBytes => GetFileResourceBytes("assets/nez/effects/DeferredLighting.mgfxo");
+		internal static byte[] DeferredLightBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/DeferredLighting.mgfxo");
 
 		// forward lighting
-		internal static byte[] ForwardLightingBytes => GetFileResourceBytes("assets/nez/effects/ForwardLighting.mgfxo");
+		internal static byte[] ForwardLightingBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/ForwardLighting.mgfxo");
 
-		internal static byte[] PolygonLightBytes => GetFileResourceBytes("assets/nez/effects/PolygonLight.mgfxo");
+		internal static byte[] PolygonLightBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/PolygonLight.mgfxo");
 
 		// scene transitions
-		internal static byte[] SquaresTransitionBytes => GetFileResourceBytes("assets/nez/effects/transitions/Squares.mgfxo");
+		internal static byte[] SquaresTransitionBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/transitions/Squares.mgfxo");
 
 		// sprite or post processor effects
 		internal static byte[] SpriteEffectBytes => GetMonoGameEmbeddedResourceBytes("Microsoft.Xna.Framework.Graphics.Effect.Resources.SpriteEffect.ogl.mgfxo");
 
-		internal static byte[] MultiTextureOverlayBytes => GetFileResourceBytes("assets/nez/effects/MultiTextureOverlay.mgfxo");
+		internal static byte[] MultiTextureOverlayBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/MultiTextureOverlay.mgfxo");
 
-		internal static byte[] ScanlinesBytes => GetFileResourceBytes("assets/nez/effects/Scanlines.mgfxo");
+		internal static byte[] ScanlinesBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Scanlines.mgfxo");
 
-		internal static byte[] ReflectionBytes => GetFileResourceBytes("assets/nez/effects/Reflection.mgfxo");
+		internal static byte[] ReflectionBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Reflection.mgfxo");
 
-		internal static byte[] GrayscaleBytes => GetFileResourceBytes("assets/nez/effects/Grayscale.mgfxo");
+		internal static byte[] GrayscaleBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Grayscale.mgfxo");
 
-		internal static byte[] SepiaBytes => GetFileResourceBytes("assets/nez/effects/Sepia.mgfxo");
+		internal static byte[] SepiaBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/Sepia.mgfxo");
 
-		internal static byte[] PaletteCyclerBytes => GetFileResourceBytes("assets/nez/effects/PaletteCycler.mgfxo");
+		internal static byte[] PaletteCyclerBytes => GetFileResourceBytes(Core.Content.RootDirectory + "/nez/effects/PaletteCycler.mgfxo");
 
 
 		/// <summary>
