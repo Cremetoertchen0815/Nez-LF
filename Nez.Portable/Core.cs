@@ -237,14 +237,14 @@ namespace Nez
 				return;
 			}
 
-			if (_scene != null)
-			{
 				for (var i = _globalManagers.Length - 1; i >= 0; i--)
 				{
 					if (_globalManagers.Buffer[i].Enabled)
 						_globalManagers.Buffer[i].Update();
 				}
 
+			if (_scene != null)
+			{
 				// read carefully:
 				// - we do not update the Scene while a SceneTransition is happening
 				// 		- unless it is SceneTransition that doesn't change Scenes (no reason not to update)
