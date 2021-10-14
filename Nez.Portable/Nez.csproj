@@ -1,36 +1,23 @@
-﻿<Project>
-	<PropertyGroup>
-		<BaseIntermediateOutputPath>obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
-	</PropertyGroup>
-	<Import Sdk="Microsoft.NET.Sdk" Project="Sdk.props" />
-  
+﻿
+<Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-		<RootNamespace>Nez</RootNamespace>
-		<AssemblyName>Nez</AssemblyName>
-		<TargetFramework>net471</TargetFramework>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-		<NoWarn>1591,1570,1572,1573</NoWarn>
-		<IntermediateOutputPath>obj\Nez\$(Configuration)</IntermediateOutputPath>
-		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<ApplicationIcon />
 	</PropertyGroup>
-  
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<OutputPath>bin\Debug\</OutputPath>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<OutputPath>bin\Release\</OutputPath>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
+
 	<ItemGroup>
-		<EmbeddedResource Include="Content\NezDefaultBMFont.xnb" />
-		<Compile Remove="Graphics\SVG\Shapes\Paths\SvgPathBuilder.cs" />
+	  <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641" />
+	  <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
 	</ItemGroup>
-	<ItemGroup>
-		<PackageReference Include="System.Drawing.Common" Version="4.6.0" />
-		<PackageReference Include="MonoGame.Framework.Portable" Version="3.7.1.189" PrivateAssets="all" />
-	</ItemGroup>
-  
-	<Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
+
 </Project>

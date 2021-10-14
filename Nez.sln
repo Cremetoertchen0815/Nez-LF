@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nez", "Nez.Portable\Nez.csproj", "{60B7197D-D0D5-405C-90A2-A56903E9B039}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nez.Persistence", "Nez.Persistence\Nez.Persistence.csproj", "{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,22 +33,6 @@ Global
 		{60B7197D-D0D5-405C-90A2-A56903E9B039}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{60B7197D-D0D5-405C-90A2-A56903E9B039}.Release|x86.ActiveCfg = Release|Any CPU
 		{60B7197D-D0D5-405C-90A2-A56903E9B039}.Release|x86.Build.0 = Release|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Debug|x86.Build.0 = Debug|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Release|iPhone.Build.0 = Release|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Release|x86.ActiveCfg = Release|Any CPU
-		{F8C8A3AD-84FE-4BDA-952F-223B1B3C6BCD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
