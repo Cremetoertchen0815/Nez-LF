@@ -22,6 +22,47 @@ namespace Nez.Tiled
 			return GetTile(worldPoint.X, worldPoint.Y);
 		}
 
+		public List<Rectangle> GetCollisionRectangles(Rectangle tile_area)
+		{
+			var checkedIndexes = new bool?[Tiles.Length];
+			var rectangles = new List<Rectangle>();
+			var startCol = -1;
+			var index = -1;
+
+			for (var y = tile_area.Top; y < tile_area.Bottom; y++)
+			{
+				for (var x = tile_area.Left; x < tile_area.Right; x++)
+				{
+					index = y * Map.Width + x;
+					var tile = GetTile(x, y);
+
+					if (tile != null && (checkedIndexes[index] == false || checkedIndexes[index] == null))
+					{
+						if (startCol < 0)
+							startCol = x;
+
+						checkedIndexes[index] = true;
+					}
+					else if (tile == null || checkedIndexes[index] == true)
+					{
+						if (startCol >= 0)
+						{
+							rectangles.Add(FindBoundsRect(startCol, x, y, tile_area.Bottom, checkedIndexes));
+							startCol = -1;
+						}
+					}
+				} // end for x
+
+				if (startCol >= 0)
+				{
+					rectangles.Add(FindBoundsRect(startCol, tile_area.Right, y, tile_area.Bottom, checkedIndexes));
+					startCol = -1;
+				}
+			}
+
+			return rectangles;
+		}
+
 		/// <summary>
 		/// Returns a list of rectangles in tile space, where any non-null tile is combined into bounding regions
 		/// </summary>
@@ -50,7 +91,7 @@ namespace Nez.Tiled
 					{
 						if (startCol >= 0)
 						{
-							rectangles.Add(FindBoundsRect(startCol, x, y, checkedIndexes));
+							rectangles.Add(FindBoundsRect(startCol, x, y, Map.Height, checkedIndexes));
 							startCol = -1;
 						}
 					}
@@ -58,7 +99,7 @@ namespace Nez.Tiled
 
 				if (startCol >= 0)
 				{
-					rectangles.Add(FindBoundsRect(startCol, Map.Width, y, checkedIndexes));
+					rectangles.Add(FindBoundsRect(startCol, Map.Width, y, Map.Height, checkedIndexes));
 					startCol = -1;
 				}
 			}
@@ -70,11 +111,11 @@ namespace Nez.Tiled
 		/// Finds the largest bounding rect around tiles between startX and endX, starting at startY and going
 		/// down as far as possible
 		/// </summary>
-		public Rectangle FindBoundsRect(int startX, int endX, int startY, bool?[] checkedIndexes)
+		public Rectangle FindBoundsRect(int startX, int endX, int startY, int endY, bool?[] checkedIndexes)
 		{
 			var index = -1;
 
-			for (var y = startY + 1; y < Map.Height; y++)
+			for (var y = startY + 1; y < endY; y++)
 			{
 				for (var x = startX; x < endX; x++)
 				{
@@ -99,7 +140,7 @@ namespace Nez.Tiled
 			}
 
 			return new Rectangle(startX * Map.TileWidth, startY * Map.TileHeight,
-				(endX - startX) * Map.TileWidth, (Map.Height - startY) * Map.TileHeight);
+				(endX - startX) * Map.TileWidth, (endY - startY) * Map.TileHeight);
 		}
 
 		/// <summary>

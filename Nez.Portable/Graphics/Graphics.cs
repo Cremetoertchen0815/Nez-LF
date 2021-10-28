@@ -30,6 +30,8 @@ namespace Nez
 		/// </summary>
 		public Sprite PixelTexture;
 
+		public Sprite CircleTexture;
+
 
 		public Graphics()
 		{
@@ -46,6 +48,8 @@ namespace Nez
 				BitmapFont.Textures[
 					BitmapFont.DefaultCharacter.TexturePage]; // bitmapFont.defaultCharacterRegion.sprite.texture2D;
 			PixelTexture = new Sprite(fontTex, fontTex.Width - 1, fontTex.Height - 1, 1, 1);
+
+			CircleTexture = new Sprite(Texture2D.FromFile(Core.GraphicsDevice, Core.Content.RootDirectory + "/textures/circle.png"));
 		}
 
 

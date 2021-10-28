@@ -11,6 +11,7 @@ namespace Nez
 		public Vector2 Start;
 		public Vector2 End;
 		public Vector2 Direction;
+		public float Length;
 
 
 		public Ray2D(Vector2 position, Vector2 end)
@@ -18,6 +19,11 @@ namespace Nez
 			Start = position;
 			End = end;
 			Direction = end - Start;
+			Length = Direction.Length();
 		}
+
+
+
+		public Vector2 SlideAlong(float distance) => Vector2.LerpPrecise(Start, End, distance);
 	}
 }

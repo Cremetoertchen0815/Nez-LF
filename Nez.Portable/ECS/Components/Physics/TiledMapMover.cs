@@ -37,6 +37,8 @@ namespace Nez.Tiled
 			public bool Right, Left, Above, Below;
 			public bool BecameGroundedThisFrame;
 			public bool WasGroundedLastFrame;
+			public bool TouchedLeftLastFrame;
+			public bool TouchedRightLastFrame;
 			public bool IsGroundedOnOneWayPlatform;
 			public float SlopeAngle;
 
@@ -91,6 +93,15 @@ namespace Nez.Tiled
 					Right, Left, Above, Below, SlopeAngle, WasGroundedLastFrame, BecameGroundedThisFrame);
 			}
 		}
+
+
+		public override void OnAddedToEntity()
+		{
+			_triggerHelper = new ColliderTriggerHelper(Entity);
+		}
+
+
+		ColliderTriggerHelper _triggerHelper;
 
 		/// <summary>
 		/// the inset on the horizontal plane that the BoxCollider will be shrunk by when moving vertically
@@ -149,6 +160,11 @@ namespace Nez.Tiled
 			boxCollider.UnregisterColliderWithPhysicsSystem();
 			boxCollider.Entity.Transform.Position += motion;
 			boxCollider.RegisterColliderWithPhysicsSystem();
+
+
+			// 3. do an overlap check of all Colliders that are triggers with all broadphase colliders, triggers or not.
+			//    Any overlaps result in trigger events.
+			_triggerHelper?.Update();
 		}
 
 		public void TestCollisions(ref Vector2 motion, Rectangle boxColliderBounds, CollisionState collisionState)
@@ -157,6 +173,8 @@ namespace Nez.Tiled
 
 			// save off our current grounded state which we will use for wasGroundedLastFrame and becameGroundedThisFrame
 			collisionState.WasGroundedLastFrame = collisionState.Below;
+			collisionState.TouchedLeftLastFrame = collisionState.Left;
+			collisionState.TouchedRightLastFrame = collisionState.Right;
 
 			// reset our collisions state
 			collisionState.Reset(ref motion);

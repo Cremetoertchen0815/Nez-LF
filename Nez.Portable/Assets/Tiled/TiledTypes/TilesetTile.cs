@@ -50,6 +50,8 @@ namespace Nez.Tiled
 		/// <value>The slope top right.</value>
 		public int SlopeTopRight;
 
+		public bool CanWallJump = false;
+
 		public void ProcessProperties()
 		{
 			string value;
@@ -67,6 +69,9 @@ namespace Nez.Tiled
 
 			if (Properties.TryGetValue("nez:slopeTopRight", out value))
 				SlopeTopRight = int.Parse(value);
+
+			if (Properties.TryGetValue("canWallJump", out value))
+				CanWallJump = bool.Parse(value);
 		}
 
 		public void UpdateAnimatedTiles()
